@@ -6,7 +6,7 @@ import seaborn as sns
 import plotly.express as px
 
 #Load Dataset
-df = pd.read_csv(r"C:\Users\Abinaya\Downloads\olympic_analysis\archive (1).zip")  # Replace with your actual file path
+df = pd.read_csv("archive (1).zip")  
 df.head()
 
 #Data Cleaning
@@ -21,7 +21,7 @@ df['Weight'] = df['Weight'] = df['Weight'].fillna(df['Weight'].median())
 print(df.info())
 print(df.describe())
 
-#Exploratory Data Analysis (EDA)
+#Exploratory Data Analysis 
 
 # Gender Distribution
 sns.countplot(data=df, x='Sex', palette='Set2', hue='Sex', legend=False)
